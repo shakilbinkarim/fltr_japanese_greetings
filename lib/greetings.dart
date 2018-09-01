@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Greetings extends StatelessWidget {
-  String japaneseGreeting;
-  String englishGreeting;
+  final String japaneseGreeting;
+  final String englishGreeting;
 
   Greetings(
       {this.japaneseGreeting = '今何もない',
@@ -14,12 +14,19 @@ class Greetings extends StatelessWidget {
       margin: EdgeInsets.all(10.0),
       child: Column(
         children: <Widget>[
-          Text(japaneseGreeting),
+          Text(
+            '$japaneseGreeting',
+            style: Theme.of(context).textTheme.title,
+          ),
           Container(
+            margin: EdgeInsets.all(10.0),
             height: 1.5,
             color: Theme.of(context).accentColor,
           ),
-          Text(englishGreeting),
+          Text(
+            '$englishGreeting',
+            style: Theme.of(context).textTheme.title,
+          ),
         ],
       ),
     );

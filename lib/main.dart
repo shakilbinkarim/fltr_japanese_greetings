@@ -16,7 +16,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Japanese Greetings'),
         ),
-        body: GreetingsManager(),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[GreetingsManager()],
+          ),
+        ),
       ),
     );
   }
